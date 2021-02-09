@@ -20,6 +20,7 @@ p{
     margin: 0 auto;
     width: 100%;
     height: 75%;
+    padding: 10px 10px 10px;
 }
 #blank{
     opacity: 0;
@@ -27,6 +28,14 @@ p{
 
 .reset {
     background-color: black;
-    color: white;
+    color: red;
     text-align: center;
+}
+
+.butn{
+    width: 20%;
+    height: 10%;
+    background-color: black;
+    color: white;
+    position: relative;
 }
