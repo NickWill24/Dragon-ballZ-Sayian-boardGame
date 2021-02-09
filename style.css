@@ -1,0 +1,32 @@
+body{
+    background-color: orange;
+    color: black;
+}
+p{
+    background-color: black;
+    color: red;
+}
+.cell{
+    height: 75px;
+    width: 75px;
+    margin: 1px;
+    border: 1px solid black;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    width: 100%;
+    height: 75%;
+}
+#blank{
+    opacity: 0;
+}
+
+.reset {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
