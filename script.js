@@ -1,19 +1,31 @@
 console.log("Welcome to Dragon Ball Z Sayian Board Game")
+let gameActive= false; 
 let gokuMovement = 0 
-let counter = 0 
-let gameActive= true; 
-let dice = document.querySelector(".dice") 
-let gokuPicture = "images/Goku.png"
-let vegetaPicture = "images/Vegeta.png"
 let vegetaMovement = 0 
+let currentPlayer= "goku";  
+// global var 
+
 const startSquare = document.querySelector("#start")
+const playButton = document.querySelector('.play')
+const resetButton = document.querySelector('.reset')
+resetButton.style.display = 'none'
+let dice = document.querySelector(".dice")
+dice.style.display= 'none'
+const rollButton= document.querySelector('.butn')
+rollButton.style.display= 'none'
+let gameStatus= document.querySelector('.gameStatus')
+//Dom element 
+
 let gamePieceOne = document.createElement("img") 
 let gamePieceTwo = document.createElement("img")
+let gokuPicture = "images/Goku.png"
+let vegetaPicture = "images/Vegeta.png"
 gamePieceTwo.src = vegetaPicture
 gamePieceOne.src = gokuPicture
 gamePieceOne.className = "gamePiece"
 gamePieceTwo.className = "gamePiece"
-let currentPlayer= "goku";  
+//gamePieces 
+
 gameBoard = ['start', 'one', 'two', 'three', 'four', 'five', 
 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twleve', 'thirteen', 'fourteen', 'fifteen', 
 'sixteen', 'seventeen', 'eigthteen', 'nineteen', 'twenty', 'twenty-one','twenty-two', 'twenty-three', 'twenty-four', 'twenty-five', 'twenty-six', 
@@ -21,15 +33,19 @@ gameBoard = ['start', 'one', 'two', 'three', 'four', 'five',
 'thirty-four', 'thirty-five', 'thirty-six', 'thirty-seven']
 
 
-//let gameStatus= document.querySelector('.gameStatus')
-//gameStatus.innerHTML= `player turn: ${currentPlayer}`
-
 
 
 
 const playGame = () => {
-startSquare.appendChild(gamePieceOne)
-startSquare.appendChild(gamePieceTwo)
+    gameActive = true
+    startSquare.appendChild(gamePieceOne)
+    startSquare.appendChild(gamePieceTwo)
+    gameStatus.innerText= `player turn: ${currentPlayer}`
+    playButton.style.display = 'none'
+    dice.style.display = 'block'
+    resetButton.style.display = 'inline'
+    rollButton.style.display= 'inline'
+    
 }
 
 
@@ -38,23 +54,46 @@ startSquare.appendChild(gamePieceTwo)
         let diceValue = Math.floor(Math.random() * 6) + 1; 
         console.log(diceValue)
         dice.src = `./images/dice${diceValue}.png`      
-        addMovement(diceValue)
+        movePlayer(diceValue)
         }, 500) 
     }
-    const addMovement = (diceValue) => {
-        gokuMovement += diceValue
-        console.log(gokuMovement)
-        movePlayer(gokuMovement)
-        vegetaMovement += diceValue
-        console.log(vegetaMovement)
+    // const addMovement = (diceValue) => {
+    //     gokuMovement += diceValue
+    //     console.log(gokuMovement)
+    //     movePlayer(gokuMovement)
+    //     vegetaMovement += diceValue
+    //     console.log(vegetaMovement)
+    // }
+    
+    const movePlayer = (number) => {
+        if (currentPlayer === 'goku') { 
+            gokuMovement += number
+            if (gokuMovement > 37) {
+                gokuMovement = 37 
+                
+            }
+            let position = gameBoard[gokuMovement]
+            let currentSquare = document.querySelector(`#${position}`)
+            currentSquare.appendChild(gamePieceOne)
+            
+            winCheck()
+        } else {
+            vegetaMovement += number
+            if (vegetaMovement > 37) vegetaMovement = 37; 
+            let position = gameBoard[vegetaMovement]
+            let currentSquare = document.querySelector(`#${position}`)
+            currentSquare.appendChild(gamePieceTwo)
+            
+            winCheck()
+        }
+        // movement = number 
+        console.log(currentPlayer)
+        // let position = gameBoard[movement]
+        // let currentSquare = document.querySelector(`#${position}`)
+        
     }
-
-    const movePlayer = (gokuMovement) => {
-        movement = gokuMovement
-        let position = gameBoard[movement]
-        let currentSquare = document.querySelector(`#${position}`)
-        currentSquare.appendChild(gamePieceOne)
-        currentSquare.appendChild(gamePieceTwo)
+    const reset= function (){
+        location.reload()
     }
     
     const switchPlayer = function(){
@@ -65,12 +104,30 @@ startSquare.appendChild(gamePieceTwo)
             currentPlayer = "goku"
             gameStatus.innerHTML=`player turn: ${currentPlayer}`
         }
-        switchPlayer()
+    }
+    const winCheck = () =>{
+        console.log(gokuMovement)
+        console.log(vegetaMovement)
+        if(gokuMovement >= 37){
+            gameStatus.innerText= `goku wins`
+            gameActive = false
+            rollButton.style.display= 'none'
+        }
+        if(vegetaMovement >= 37){
+            gameStatus.innerText=`vegeta wins`
+            gameActive= false
+            rollButton.style.display= 'none'
+        }
+        if (vegetaMovement < 37 && gokuMovement < 37) {
+            switchPlayer()
+            
+        }
     }
     
 
 
-//document.querySelector('.reset').addEventListener('click', reset)
-
-dice.addEventListener('click',rollTheDice)
-document.querySelector('.play').addEventListener('click', playGame)
+    
+    
+    playButton.addEventListener('click', playGame)
+    dice.addEventListener('click',rollTheDice)
+    resetButton.addEventListener('click', reset)
