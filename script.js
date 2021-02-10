@@ -57,13 +57,6 @@ const playGame = () => {
         movePlayer(diceValue)
         }, 500) 
     }
-    // const addMovement = (diceValue) => {
-    //     gokuMovement += diceValue
-    //     console.log(gokuMovement)
-    //     movePlayer(gokuMovement)
-    //     vegetaMovement += diceValue
-    //     console.log(vegetaMovement)
-    // }
     
     const movePlayer = (number) => {
         if (currentPlayer === 'goku') { 
@@ -73,24 +66,49 @@ const playGame = () => {
                 
             }
             let position = gameBoard[gokuMovement]
-            let currentSquare = document.querySelector(`#${position}`)
-            currentSquare.appendChild(gamePieceOne)
-            
+            checkSpecialCondition(position)
+            // assignPosition(position)
             winCheck()
         } else {
             vegetaMovement += number
             if (vegetaMovement > 37) vegetaMovement = 37; 
             let position = gameBoard[vegetaMovement]
+            checkSpecialCondition(position)
+            // assignPosition(position)
+            winCheck()
+        }
+        
+        console.log(currentPlayer)
+        
+    }
+    const checkSpecialCondition= (position) => {
+        if (position == 'one') {
+            if (currentPlayer == 'goku') {
+                position ='ten' 
+                gameStatus.innerHTML= `player move up ${currentPlayer}`
+                assignPosition(position)
+                gokuMovement += 9  
+            }else{
+                position ='ten' 
+                gameStatus.innerHTML= `player move up ${currentPlayer}`
+                assignPosition(position)
+                vegetaMovement += 9 
+            }
+        } else {
+            assignPosition(position)
+        }
+    }
+    const assignPosition= (position) => {
+        console.log('positionCheck', position)
+        if (currentPlayer === 'goku') {
+            let currentSquare = document.querySelector(`#${position}`)
+            currentSquare.appendChild(gamePieceOne)
+
+        } else {
             let currentSquare = document.querySelector(`#${position}`)
             currentSquare.appendChild(gamePieceTwo)
             
-            winCheck()
         }
-        // movement = number 
-        console.log(currentPlayer)
-        // let position = gameBoard[movement]
-        // let currentSquare = document.querySelector(`#${position}`)
-        
     }
     const reset= function (){
         location.reload()
