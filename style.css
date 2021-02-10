@@ -1,14 +1,21 @@
 body{
     background-color: orange;
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 p{
     background-color: black;
     color: red;
 }
 .cell{
-    height: 75px;
-    width: 75px;
+    height: 65px;
+    width: 65px;
     margin: 1px;
     border: 1px solid black;
 }
@@ -18,7 +25,7 @@ p{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
     height: 75%;
     padding: 10px 10px 10px;
 }
@@ -43,8 +50,8 @@ p{
 }
 .game-action{
     position: absolute;
-    top: 40vh;
-    left: 30vw; 
+    /* top: 40vh;
+    left: 30vw;  */
     width: 24em;
     height: 24em;
     display: flex;
