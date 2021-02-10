@@ -94,6 +94,19 @@ const playGame = () => {
                 assignPosition(position)
                 vegetaMovement += 9 
             }
+        // if (position == 'five') {
+        //     if (currentplayer == 'goku') {
+        //         position = 'fourteen'
+        //         gameStatus.innerHTML= `player move up ${currentPlayer}`
+        //         assignPosition(position)
+        //         gokuMovement += 14
+        //     }
+        // } else {
+        //     position = 'fourteen'
+        //     gameStatus.innerHTML= `player move up ${currentPlayer}`
+        //     assignPosition(position)
+        //     vegetaMovement += 14 
+        // }
         } else {
             assignPosition(position)
         }
