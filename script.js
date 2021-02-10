@@ -4,15 +4,20 @@ let counter = 0
 let gameActive= true; 
 let dice = document.querySelector(".dice") 
 let gokuPicture = "images/Goku.png"
-let vegetaPicture = "images/"
+let vegetaPicture = "images/Vegeta.png"
+let vegetaMovement = 0 
 const startSquare = document.querySelector("#start")
 let gamePieceOne = document.createElement("img") 
+let gamePieceTwo = document.createElement("img")
+gamePieceTwo.src = vegetaPicture
 gamePieceOne.src = gokuPicture
 gamePieceOne.className = "gamePiece"
+gamePieceTwo.className = "gamePiece"
 gameBoard = ['start', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twleve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eigthteen', 'nineteen', 'twenty', 'twenty-one','twenty-two', 'twenty-three', 'twenty-four', 'twenty-five', 'twenty-six', 'twenty-seven', 'twenty-eight', 'twenty-nine', 'thirty', 'thirty-one', 'thirty-two', 'thirty-three', 'thirty-four', 'thirty-five', 'thirty-six', 'thirty-seven']
 
 const playGame = () => {
 startSquare.appendChild(gamePieceOne)
+startSquare.appendChild(gamePieceTwo)
 }
 
 
@@ -28,6 +33,8 @@ startSquare.appendChild(gamePieceOne)
         gokuMovement += diceValue
         console.log(gokuMovement)
         movePlayer(gokuMovement)
+        vegetaMovement += diceValue
+        console.log(vegetaMovement)
     }
 
     const movePlayer = (gokuMovement) => {
@@ -35,6 +42,7 @@ startSquare.appendChild(gamePieceOne)
         let position = gameBoard[movement]
         let currentSquare = document.querySelector(`#${position}`)
         currentSquare.appendChild(gamePieceOne)
+        currentSquare.appendChild(gamePieceTwo)
     }
 
 
