@@ -13,7 +13,19 @@ gamePieceTwo.src = vegetaPicture
 gamePieceOne.src = gokuPicture
 gamePieceOne.className = "gamePiece"
 gamePieceTwo.className = "gamePiece"
-gameBoard = ['start', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twleve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eigthteen', 'nineteen', 'twenty', 'twenty-one','twenty-two', 'twenty-three', 'twenty-four', 'twenty-five', 'twenty-six', 'twenty-seven', 'twenty-eight', 'twenty-nine', 'thirty', 'thirty-one', 'thirty-two', 'thirty-three', 'thirty-four', 'thirty-five', 'thirty-six', 'thirty-seven']
+let currentPlayer= "goku";  
+gameBoard = ['start', 'one', 'two', 'three', 'four', 'five', 
+'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twleve', 'thirteen', 'fourteen', 'fifteen', 
+'sixteen', 'seventeen', 'eigthteen', 'nineteen', 'twenty', 'twenty-one','twenty-two', 'twenty-three', 'twenty-four', 'twenty-five', 'twenty-six', 
+'twenty-seven', 'twenty-eight', 'twenty-nine', 'thirty', 'thirty-one', 'thirty-two', 'thirty-three', 
+'thirty-four', 'thirty-five', 'thirty-six', 'thirty-seven']
+
+
+//let gameStatus= document.querySelector('.gameStatus')
+//gameStatus.innerHTML= `player turn: ${currentPlayer}`
+
+
+
 
 const playGame = () => {
 startSquare.appendChild(gamePieceOne)
@@ -44,7 +56,18 @@ startSquare.appendChild(gamePieceTwo)
         currentSquare.appendChild(gamePieceOne)
         currentSquare.appendChild(gamePieceTwo)
     }
-
+    
+    const switchPlayer = function(){
+        if (currentPlayer == "goku") {
+            currentPlayer = "vegeta"
+            gameStatus.innerHTML=`player turn: ${currentPlayer}`
+        } else { 
+            currentPlayer = "goku"
+            gameStatus.innerHTML=`player turn: ${currentPlayer}`
+        }
+        switchPlayer()
+    }
+    
 
 
 //document.querySelector('.reset').addEventListener('click', reset)
