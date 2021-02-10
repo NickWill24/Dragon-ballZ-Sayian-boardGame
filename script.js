@@ -1,21 +1,18 @@
 console.log("Welcome to Dragon Ball Z Sayian Board Game")
-
+let gokuMovement = 0 
 let counter = 0 
 let gameActive= true; 
-let PlayerOne = "goku";
-let playerTwo = "vegeta"
 let dice = document.querySelector(".dice") 
-//make the player character move up, down, and back 
-//display the dice and how many move the player move 
-// make bad spot and good spot work 
+let gokuPicture = "images/Goku.png"
+const startSquare = document.querySelector("#start")
+let gamePieceOne = document.createElement("img") 
+gamePieceOne.src = gokuPicture
+gamePieceOne.className = "gamePiece"
+gameBoard = ['start', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight']
 
-
-//let gameStatus= document.querySelector('.gameStatus')
-//gameStatus.innerHTML=`player turn: ${currentPlayer}`
-
-//const winningContidonal 
-//const handleClick= function(event){
-
+const playGame = () => {
+startSquare.appendChild(gamePieceOne)
+}
 
 
     const rollTheDice = () => { 
@@ -23,7 +20,20 @@ let dice = document.querySelector(".dice")
         let diceValue = Math.floor(Math.random() * 6) + 1; 
         console.log(diceValue)
         dice.src = `./images/dice${diceValue}.png`      
+        addMovement(diceValue)
         }, 500) 
+    }
+    const addMovement = (diceValue) => {
+        gokuMovement += diceValue
+        console.log(gokuMovement)
+        movePlayer(gokuMovement)
+    }
+
+    const movePlayer = (gokuMovement) => {
+        movement = gokuMovement
+        let position = gameBoard[movement]
+        let currentSquare = document.querySelector(`#${position}`)
+        currentSquare.appendChild(gamePieceOne)
     }
 
 
@@ -31,3 +41,4 @@ let dice = document.querySelector(".dice")
 //document.querySelector('.reset').addEventListener('click', reset)
 
 dice.addEventListener('click',rollTheDice)
+document.querySelector('.play').addEventListener('click', playGame)

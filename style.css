@@ -48,6 +48,14 @@ p{
     background-color: black;
     color: white;
 }
+.play {
+    padding: 1em;
+    border-radius: 0.5em;
+    border: none;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+}
 .game-action{
     position: absolute;
     /* top: 40vh;
@@ -58,4 +66,8 @@ p{
     justify-content: space-evenly; 
     align-items: center;
     flex-direction: column;
+}
+.gamePiece{
+    width: 30px;
+    height: 40px;
 }
