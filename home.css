@@ -1,6 +1,19 @@
 body {
-    background-color: orange;
+    background-color: red;
 }
 h1 {
-    color: blue;
+    color: orange;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+nav{
+    text-align: center;
+    background-color: white;
+    color: red;
+    margin: 5%; 
+    padding: 15px 15px 15px;
+}
+p{
+    background-color: orange;
+    color: black;
 }
