@@ -94,19 +94,43 @@ const playGame = () => {
                 assignPosition(position)
                 vegetaMovement += 9 
             }
-        // if (position == 'five') {
-        //     if (currentplayer == 'goku') {
-        //         position = 'fourteen'
-        //         gameStatus.innerHTML= `player move up ${currentPlayer}`
-        //         assignPosition(position)
-        //         gokuMovement += 14
-        //     }
-        // } else {
-        //     position = 'fourteen'
-        //     gameStatus.innerHTML= `player move up ${currentPlayer}`
-        //     assignPosition(position)
-        //     vegetaMovement += 14 
-        // }
+        }else if(position == 'five'){
+            if (currentPlayer == 'goku') {
+                position ='fourteen' 
+                gameStatus.innerHTML= `player move up ${currentPlayer}`
+                assignPosition(position)
+                gokuMovement += 9  
+            }else{
+                position ='fourteen' 
+                gameStatus.innerHTML= `player move up ${currentPlayer}`
+                assignPosition(position)
+                vegetaMovement += 9 
+            }
+        }else if(position == 'twleve'){
+            if (currentPlayer == 'goku') {
+                position ='twenty-four' 
+                gameStatus.innerHTML= `player move up ${currentPlayer}`
+                assignPosition(position)
+                gokuMovement += 12 
+            }else{
+                position ='twleve' 
+                gameStatus.innerHTML= `player move up ${currentPlayer}`
+                assignPosition(position)
+                vegetaMovement += 12
+            }
+        }else if(position == 'twenty-six'){
+                if (currentPlayer == 'goku') {
+                    position ='thirty-four' 
+                    gameStatus.innerHTML= `player move up ${currentPlayer}`
+                    assignPosition(position)
+                    gokuMovement += 8
+                }else{
+                    position ='twenty-six' 
+                    gameStatus.innerHTML= `player move up ${currentPlayer}`
+                    assignPosition(position)
+                    vegetaMovement += 8
+                }
+            
         } else {
             assignPosition(position)
         }
