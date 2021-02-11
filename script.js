@@ -131,6 +131,16 @@ const playGame = () => {
                     assignPosition(position)
                     vegetaMovement = 3
                 }
+            }
+        else if (vegetaMovement === gokuMovement) {
+            if(currentPlayer === 'goku'){
+                gokuMovement = 0 
+                assignPosition('start')
+            }
+            else{
+                vegetaMovement = 0 
+                assignPosition('start')
+            }
         } else {
             assignPosition(position)
         }
@@ -140,7 +150,7 @@ const playGame = () => {
         if (currentPlayer === 'goku') {
             let currentSquare = document.querySelector(`#${position}`)
             currentSquare.appendChild(gamePieceOne)
-
+            
         } else {
             let currentSquare = document.querySelector(`#${position}`)
             currentSquare.appendChild(gamePieceTwo)
@@ -148,7 +158,18 @@ const playGame = () => {
         }
     }
     const reset= function (){
-        location.reload()
+        gokuMovement= 0 
+        vegetaMovement= 0   
+        let cells = document.querySelectorAll('.cell') 
+        cells.forEach(cell => {
+            if (cell.hasChildNodes()){
+                cell.removeChild(cell.childNodes[0])
+            }
+        })
+        rollButton.style.display = 'inline'
+        let currentSquare = document.querySelector(`#start`)
+        currentSquare.appendChild(gamePieceOne)
+        currentSquare.appendChild(gamePieceTwo)
     }
     
     const switchPlayer = function(){
@@ -165,11 +186,13 @@ const playGame = () => {
         console.log(vegetaMovement)
         if(gokuMovement >= 37){
             gameStatus.innerText= `goku wins`
+            console.log('goku wins')
             gameActive = false
             rollButton.style.display= 'none'
         }
         if(vegetaMovement >= 37){
             gameStatus.innerText=`vegeta wins`
+            console.log('vegeta wins')
             gameActive= false
             rollButton.style.display= 'none'
         }
