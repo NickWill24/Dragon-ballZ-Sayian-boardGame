@@ -118,7 +118,7 @@ const playGame = () => {
                 assignPosition(position)
                 vegetaMovement += 12
             }
-        }else if(position == 'seven' || position == 'eight' || position == 'nine' || position == "thirty" || position == "thirty-three"){
+        }else if(position == 'seven' || position == 'eigthteen' || position == 'twenty-six' || position == "thirty" || position == "thirty-three"){
                 console.log('timeWrap')
                 if (currentPlayer == 'goku') {
                     position ='three' 
