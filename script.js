@@ -2,7 +2,7 @@ console.log("Welcome to Dragon Ball Z Sayian Board Game")
 let gameActive= false; 
 let gokuMovement = 0 
 let vegetaMovement = 0 
-let currentPlayer= "goku";  
+let currentPlayer= 'Goku';  
 // global var 
 
 const startSquare = document.querySelector("#start")
@@ -14,6 +14,7 @@ dice.style.display= 'none'
 const rollButton= document.querySelector('.butn')
 rollButton.style.display= 'none'
 let gameStatus= document.querySelector('.gameStatus')
+let gameStory= document.querySelector('.game-story')
 //Dom element 
 
 let gamePieceOne = document.createElement("img") 
@@ -40,7 +41,7 @@ const playGame = () => {
     gameActive = true
     startSquare.appendChild(gamePieceOne)
     startSquare.appendChild(gamePieceTwo)
-    gameStatus.innerText= `player turn: ${currentPlayer}`
+    gameStatus.innerText= `Player turn: ${currentPlayer}`
     playButton.style.display = 'none'
     dice.style.display = 'block'
     resetButton.style.display = 'inline'
@@ -59,101 +60,155 @@ const playGame = () => {
     }
     
     const movePlayer = (number) => {
-        if (currentPlayer === 'goku') { 
+        if (currentPlayer === 'Goku') { 
             gokuMovement += number
             if (gokuMovement > 37) {
                 gokuMovement = 37 
                 
             }
             let position = gameBoard[gokuMovement]
-            checkSpecialCondition(position)
-            // assignPosition(position)
-            winCheck()
+            // checkSpecialCondition(position)
+            assignPosition(position)
+            
         } else {
             vegetaMovement += number
             if (vegetaMovement > 37) vegetaMovement = 37; 
             let position = gameBoard[vegetaMovement]
-            checkSpecialCondition(position)
-            // assignPosition(position)
-            winCheck()
+            
+            assignPosition(position)
+            
         }
         
         console.log(currentPlayer)
         
     }
     const checkSpecialCondition= (position) => {
+        let timeWarp = false
         if (position == 'one') {
-            if (currentPlayer == 'goku') {
+            if (currentPlayer == 'Goku') {
                 position ='ten' 
-                gameStatus.innerHTML= `player move up ${currentPlayer}`
-                assignPosition(position)
+                gameStory.innerText= `kaio-ken x10! ${currentPlayer} moves to square ten`
+                let currentSquare = document.querySelector(`#${position}`)
+                currentSquare.appendChild(gamePieceOne)
                 gokuMovement += 9  
             }else{
                 position ='ten' 
-                gameStatus.innerHTML= `player move up ${currentPlayer}`
-                assignPosition(position)
+                gameStory.innerText= `kaio-ken x10! ${currentPlayer} moves to square ten`
+                let currentSquare = document.querySelector(`#${position}`)
+                currentSquare.appendChild(gamePieceTwo)
                 vegetaMovement += 9 
             }
         }else if(position == 'five'){
-            if (currentPlayer == 'goku') {
+            if (currentPlayer == 'Goku') {
                 position ='fourteen' 
-                gameStatus.innerHTML= `player move up ${currentPlayer}`
-                assignPosition(position)
+                gameStory.innerText= `Super Saiyan 3! ${currentPlayer} moves to sqaure fourteen`
+                let currentSquare = document.querySelector(`#${position}`)
+                currentSquare.appendChild(gamePieceOne)
                 gokuMovement += 9  
             }else{
                 position ='fourteen' 
-                gameStatus.innerHTML= `player move up ${currentPlayer}`
-                assignPosition(position)
+                gameStory.innerText= `Super Saiyan 3! ${currentPlayer} moves to sqaure fourteen`
+                let currentSquare = document.querySelector(`#${position}`)
+                currentSquare.appendChild(gamePieceTwo)
                 vegetaMovement += 9 
             }
         }else if(position == 'twelve'){
-            if (currentPlayer == 'goku') {
+            if (currentPlayer == 'Goku') {
                 position ='twenty-four' 
-                gameStatus.innerHTML= `player move up ${currentPlayer}`
-                assignPosition(position)
+                gameStory.innerText= `Fusion Gogeta! ${currentPlayer} moves to square twenty-four`
+                let currentSquare = document.querySelector(`#${position}`)
+                currentSquare.appendChild(gamePieceOne)
                 gokuMovement += 12 
             }else{
                 position ='twenty-four' 
-                gameStatus.innerHTML= `player move up ${currentPlayer}`
-                assignPosition(position)
+                gameStory.innerText= `Fusion Gogeta! ${currentPlayer} moves to square twenty-four`
+                let currentSquare = document.querySelector(`#${position}`)
+                currentSquare.appendChild(gamePieceTwo)
                 vegetaMovement += 12
             }
         }else if(position == 'seven' || position == 'eigthteen' || position == 'twenty-six' || position == "thirty" || position == "thirty-three"){
-                console.log('timeWrap')
-                if (currentPlayer == 'goku') {
+                timeWarp = true
+                console.log('timeWarp')
+                if (currentPlayer == 'Goku') {
                     position ='three' 
-                    gameStatus.innerHTML= `player move back ${currentPlayer}`
-                    assignPosition(position)
+                    gameStory.innerText= `Time Warp! ${currentPlayer} is sent back to square three`
+                    let currentSquare = document.querySelector(`#${position}`)
+                    currentSquare.appendChild(gamePieceOne)
                     gokuMovement = 3
                 }else{
                     position ='three' 
-                    gameStatus.innerHTML= `player move back ${currentPlayer}`
-                    assignPosition(position)
+                    gameStory.innerText= `Time Warp! ${currentPlayer} is sent back to square three`
+                    let currentSquare = document.querySelector(`#${position}`)
+                    currentSquare.appendChild(gamePieceTwo)
                     vegetaMovement = 3
                 }
             }
-        else if (vegetaMovement === gokuMovement) {
-            if(currentPlayer === 'goku'){
-                gokuMovement = 0 
-                assignPosition('start')
+        else if(position == 'thirty-six'){
+                console.log('cell')
+                if (currentPlayer == 'Goku') {
+                    position ='twenty-five' 
+                    gameStory.innerText= `Defeated by Cell! ${currentPlayer} is sent back to square twenty-five`
+                    let currentSquare = document.querySelector(`#${position}`)
+                    currentSquare.appendChild(gamePieceOne)
+                    gokuMovement = 25
+                }else{
+                    position ='twenty-five' 
+                    gameStory.innerText= `Defeated by Cell! ${currentPlayer} is sent back to square twenty-five`
+                    let currentSquare = document.querySelector(`#${position}`)
+                    currentSquare.appendChild(gamePieceTwo)
+                    vegetaMovement = 25
+                }
+            }
+        if (vegetaMovement === gokuMovement) {
+            if(currentPlayer === 'Goku'){
+                if(timeWarp){
+                    setTimeout(() => {
+                        gameStory.innerText= `"I am the prince of all Saiyans once again!
+                        Bow before your prince, Kakarot!" Goku moves back to start `
+                        gokuMovement = 0 
+                        let currentSquare = document.querySelector(`#start`)
+                        currentSquare.appendChild(gamePieceOne)
+                    },1000)
+                }
+                else{
+                    gameStory.innerText= `"I am the prince of all Saiyans once again!
+                    Bow before your prince, Kakarot!" Goku moves back to start `
+                    gokuMovement = 0 
+                    let currentSquare = document.querySelector(`#start`)
+                    currentSquare.appendChild(gamePieceOne)
+                }
             }
             else{
-                vegetaMovement = 0 
-                assignPosition('start')
+                if (timeWarp) {
+                    setTimeout(() => {
+                        gameStory.innerText= `"Welcome back Vegeta. I guess it's a good thing I didn't bury you that deep after all." Vegeta moves back to start `
+                        vegetaMovement = 0 
+                        let currentSquare = document.querySelector(`#start`)
+                        currentSquare.appendChild(gamePieceTwo)
+                    },1000)
+                } else {
+                    gameStory.innerText= `"Welcome back Vegeta. I guess it's a good thing I didn't bury you that deep after all." Vegeta moves back to start `
+                    vegetaMovement = 0 
+                    let currentSquare = document.querySelector(`#start`)
+                    currentSquare.appendChild(gamePieceTwo)
+                    
+                }
             }
-        } else {
-            assignPosition(position)
         }
+        winCheck()
     }
     const assignPosition= (position) => {
         console.log('positionCheck', position)
-        if (currentPlayer === 'goku') {
+        if (currentPlayer === 'Goku') {
             let currentSquare = document.querySelector(`#${position}`)
             currentSquare.appendChild(gamePieceOne)
-            
+            gameStory.innerText= `Goku moves to square ${position}`
+            setTimeout(() => checkSpecialCondition(position),1000)
         } else {
             let currentSquare = document.querySelector(`#${position}`)
             currentSquare.appendChild(gamePieceTwo)
+            gameStory.innerText= `Vegeta moves to square ${position}`
+            setTimeout(() => checkSpecialCondition(position),1000)
             
         }
     }
@@ -173,26 +228,28 @@ const playGame = () => {
     }
     
     const switchPlayer = function(){
-        if (currentPlayer == "goku") {
-            currentPlayer = "vegeta"
-            gameStatus.innerHTML=`player turn: ${currentPlayer}`
+        if (currentPlayer == 'Goku') {
+            currentPlayer = 'Vegeta'
+            gameStatus.innerHTML=`Player turn: ${currentPlayer}`
         } else { 
-            currentPlayer = "goku"
-            gameStatus.innerHTML=`player turn: ${currentPlayer}`
+            currentPlayer = 'Goku'
+            gameStatus.innerHTML=`Player turn: ${currentPlayer}`
         }
     }
     const winCheck = () =>{
         console.log(gokuMovement)
         console.log(vegetaMovement)
         if(gokuMovement >= 37){
-            gameStatus.innerText= `goku wins`
-            console.log('goku wins')
+            gameStory.innerText='Game Over!'
+            gameStatus.innerText= `Goku wins`
+            console.log('Goku wins')
             gameActive = false
             rollButton.style.display= 'none'
         }
         if(vegetaMovement >= 37){
-            gameStatus.innerText=`vegeta wins`
-            console.log('vegeta wins')
+            gameStory.innerText='Game Over!'
+            gameStatus.innerText=`Vegeta wins`
+            console.log('Vegeta wins')
             gameActive= false
             rollButton.style.display= 'none'
         }

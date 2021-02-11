@@ -14,9 +14,15 @@ body{
 .gameStatus{
     color: red;
 }
-    /* .game-story{
-        background-color: green ;
-    } */
+.game-story{
+    background-color: white ;
+    color: red;
+    width: 100%;
+    height: 15vh;
+    padding: 1em;
+    border-radius: .5em;
+    text-align: center;
+}
 .cell{
     height: 65px;
     width: 65px;
@@ -66,8 +72,8 @@ body{
 }
 .game-action{
     position: absolute;
-    /* top: 40vh;
-    left: 30vw;  */
+    top: 40vh;
+    left: 30vw; 
     width: 24em;
     height: 24em;
     display: flex;
@@ -102,7 +108,7 @@ background-color: black;
     background-size: cover;
     background-color: black;
 }
-#twleve{
+#twelve{
     background-image: url('https://images.wikia.com/dragonball/images/5/5b/Ssj4_Gogeta_by_aznfanaticwarrior.png');
     background-size: cover;
     background-color: black;
@@ -131,4 +137,9 @@ background-size: cover;
 background-color: red;
 background-image: url('https://i.pinimg.com/originals/b9/13/ce/b913ce932bfaec246e99e6a91b966f04.png');
 background-size: cover;
+}
+#thirty-six{
+    background-color: red;
+    background-size: cover;
+    background-image: url("https://wallpapertag.com/wallpaper/full/1/4/2/755019-cell-dbz-wallpapers-2048x2048-for-samsung.jpg");
 }
