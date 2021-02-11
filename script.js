@@ -27,7 +27,7 @@ gamePieceTwo.className = "gamePiece"
 //gamePieces 
 
 gameBoard = ['start', 'one', 'two', 'three', 'four', 'five', 
-'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twleve', 'thirteen', 'fourteen', 'fifteen', 
+'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 
 'sixteen', 'seventeen', 'eigthteen', 'nineteen', 'twenty', 'twenty-one','twenty-two', 'twenty-three', 'twenty-four', 'twenty-five', 'twenty-six', 
 'twenty-seven', 'twenty-eight', 'twenty-nine', 'thirty', 'thirty-one', 'thirty-two', 'thirty-three', 
 'thirty-four', 'thirty-five', 'thirty-six', 'thirty-seven']
@@ -106,31 +106,31 @@ const playGame = () => {
                 assignPosition(position)
                 vegetaMovement += 9 
             }
-        }else if(position == 'twleve'){
+        }else if(position == 'twelve'){
             if (currentPlayer == 'goku') {
                 position ='twenty-four' 
                 gameStatus.innerHTML= `player move up ${currentPlayer}`
                 assignPosition(position)
                 gokuMovement += 12 
             }else{
-                position ='twleve' 
+                position ='twenty-four' 
                 gameStatus.innerHTML= `player move up ${currentPlayer}`
                 assignPosition(position)
                 vegetaMovement += 12
             }
-        }else if(position == 'twenty-six'){
+        }else if(position == 'seven' || position == 'eight' || position == 'nine' || position == "thirty" || position == "thirty-three"){
+                console.log('timeWrap')
                 if (currentPlayer == 'goku') {
-                    position ='thirty-four' 
-                    gameStatus.innerHTML= `player move up ${currentPlayer}`
+                    position ='three' 
+                    gameStatus.innerHTML= `player move back ${currentPlayer}`
                     assignPosition(position)
-                    gokuMovement += 8
+                    gokuMovement = 3
                 }else{
-                    position ='twenty-six' 
-                    gameStatus.innerHTML= `player move up ${currentPlayer}`
+                    position ='three' 
+                    gameStatus.innerHTML= `player move back ${currentPlayer}`
                     assignPosition(position)
-                    vegetaMovement += 8
+                    vegetaMovement = 3
                 }
-            
         } else {
             assignPosition(position)
         }

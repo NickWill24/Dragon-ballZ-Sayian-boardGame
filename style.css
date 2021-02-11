@@ -76,6 +76,32 @@ p{
     height: 40px;
 }
 #one{
-background-image: url('http://www.pngall.com/wp-content/uploads/2016/04/9-Number-PNG.png');
+background-image: url('http://www.pngmart.com/files/3/Dragon-Ball-Goku-PNG-HD.png');
 background-size: cover;
+background-color: black;
+}
+#start{
+    background-image: url('https://i.pinimg.com/originals/1a/34/dd/1a34dd2d1f6496dfd777ebea75e1bbeb.png');
+    background-size: cover;
+    
+}
+#thirty-seven{
+    background-image: url('https://www.pngkey.com/png/full/423-4230978_esferas-del-dragon-png.png');
+    background-size: cover;
+
+}
+#five{
+    background-image: url('https://pnommensen.com/images/goku-png-hd-17.png');
+    background-size: cover;
+    background-color: black;
+}
+#twleve{
+    background-image: url('https://images.wikia.com/dragonball/images/5/5b/Ssj4_Gogeta_by_aznfanaticwarrior.png');
+    background-size: cover;
+    background-color: black;
+}
+#twenty-six{
+    background-image: url('https://img.pngio.com/vegeta-wallpaper-png-free-vegeta-wallpaperpng-transparent-dragon-ball-z-hd-png-2400_3000.png');
+    background-size: cover;
+    background-color: black;
 }
