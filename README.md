@@ -21,6 +21,7 @@ Trello : https://trello.com/b/nZm8aDho/game-project-management
 • CSS
 ***
 # How to get start stared:
+![mockup](images/Gameshot.png)
 Open the the link to to the start the game 
 Their will be two player for this game. 
 The player will have a choice of goku or vegeta 
@@ -29,44 +30,46 @@ The first player to reach the finish spot on the board will win the game.
 
 # Credits: 
 
-Github 
+Image Sources: 
 
-•Dice1.png
+https://media.geeksforgeeks.org/wp-content/uploads/20200508141000/dice1.png
 
-•Dice2.png
+https://media.geeksforgeeks.org/wp-content/uploads/20200508141000/dice2.png
 
-•Dice3.png
+https://media.geeksforgeeks.org/wp-content/uploads/20200508141000/dice3.png
 
-•Dice4.png
+https://media.geeksforgeeks.org/wp-content/uploads/20200508141000/dice4.png
 
-•Dice5.png
+https://media.geeksforgeeks.org/wp-content/uploads/20200508141000/dice5.png
 
-•Dice6.png
+https://media.geeksforgeeks.org/wp-content/uploads/20200508141000/dice6.png
 
-•Goku ultra.png
+https://www.deviantart.com/ruga-rell/art/Mastered-Ultra-Instinct-Goku-701728210
 
-•Vegeta blue.png 
+https://www.deviantart.com/saodvd/art/Vegeta-SSJ-Blue-Full-Power-725462551
 
 •Dragon.png
 
-Goku Black.png 
+https://i.pinimg.com/originals/8d/32/a1/8d32a1eaf891e412490bc3913f15ab90.png
 
-Kid.buu.png
+https://vignette4.wikia.nocookie.net/villains/images/9/99/Kid_buu88.png/revision/latest?cb=20151209181147
 
-Golden Freiza.png
+http://www.nerdsonearth.com/wp-content/uploads/2015/11/golden_frieza__dragonball_heroes__by_rayzorblade189-d8ulie9.png
 
-Broly.png 
+https://i.pinimg.com/originals/b9/13/ce/b913ce932bfaec246e99e6a91b966f04.png
 
-Cell.png
+https://wallpapertag.com/wallpaper/full/1/4/2/755019-cell-dbz-wallpapers-2048x2048-for-samsung.jpg
 
-Shergon.png 
+https://i.pinimg.com/originals/1a/34/dd/1a34dd2d1f6496dfd777ebea75e1bbeb.png
 
-Dragon balls.png
+https://www.pngkey.com/png/full/423-4230978_esferas-del-dragon-png.png
 
-Super Saiyan Goku 3.png 
+https://pnommensen.com/images/goku-png-hd-17.png'   
 
-Gogeta.png 
+https://images.wikia.com/dragonball/images/5/5b/Ssj4_Gogeta_by_aznfanaticwarrior.png
 
-Jiren.png 
+https://cdn.aiktry.com/monthly_2020_09/177721727_PowerfulInfluenceJirenFullPowerDBSRender(DragonBallZDokkanBattle).png.b5c4435ae9412a01de9961eed8969595.png
 
-Group pic.png 
+http://orig04.deviantart.net/9038/f/2014/032/8/f/los_guerreros_de_la_caleta_by_bardocksonic-d74r3ss.png
+
+http://www.pngmart.com/files/3/Dragon-Ball-Goku-PNG-HD.png
