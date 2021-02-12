@@ -48,7 +48,7 @@ https://www.deviantart.com/ruga-rell/art/Mastered-Ultra-Instinct-Goku-701728210
 
 https://www.deviantart.com/saodvd/art/Vegeta-SSJ-Blue-Full-Power-725462551
 
-•Dragon.png
+https://www.klipartz.com/en/sticker-png-owvti
 
 https://i.pinimg.com/originals/8d/32/a1/8d32a1eaf891e412490bc3913f15ab90.png
 
