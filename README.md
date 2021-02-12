@@ -1,11 +1,11 @@
 # Dragon-ballZ-Sayian-boardGame
 Dragon-ballZ Sayian board Game 
 
-Date: 2/08/2021 
+Date: 2/12/2021 
 
 By: Nick Williams 
 
-Link:(https://trello.com/b/nZm8aDho/game-project-management)
+Trello : https://trello.com/b/nZm8aDho/game-project-management
 ***
 
 
@@ -14,9 +14,11 @@ Link:(https://trello.com/b/nZm8aDho/game-project-management)
 ***
 
 # Technologies 
- Technologies 1 
- Techologies 2 
-    Techologices 3 
+• HTML
+
+• Javascript
+
+• CSS
 ***
 # How to get start stared:
 Open the the link to to the start the game 
@@ -29,4 +31,42 @@ The first player to reach the finish spot on the board will win the game.
 
 Github 
 
+•Dice1.png
 
+•Dice2.png
+
+•Dice3.png
+
+•Dice4.png
+
+•Dice5.png
+
+•Dice6.png
+
+•Goku ultra.png
+
+•Vegeta blue.png 
+
+•Dragon.png
+
+Goku Black.png 
+
+Kid.buu.png
+
+Golden Freiza.png
+
+Broly.png 
+
+Cell.png
+
+Shergon.png 
+
+Dragon balls.png
+
+Super Saiyan Goku 3.png 
+
+Gogeta.png 
+
+Jiren.png 
+
+Group pic.png 
