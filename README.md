@@ -34,6 +34,10 @@ Trello : https://trello.com/b/nZm8aDho/game-project-management
 
 •The first player to reach the finish spot on the board will win the game. 
 
+# Future update:
+• Add an extra booast 
+
+• Add sound effects 
 
 # Credits: 
 
