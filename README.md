@@ -15,7 +15,7 @@ Trello : https://trello.com/b/nZm8aDho/game-project-management
 
 # Description
  the project is A board game inspire from Dragon ball z, where users can play against each other to find out the winner. 
-***
+
 
 # Technologies 
 • HTML
@@ -23,7 +23,7 @@ Trello : https://trello.com/b/nZm8aDho/game-project-management
 • Javascript
 
 • CSS
-***
+
 # How to get start stared:
 ![mockup](images/Gameshot.png)
 • Open the the link to to the start the game.
@@ -33,7 +33,7 @@ Trello : https://trello.com/b/nZm8aDho/game-project-management
 •The player will have a choice of goku or vegeta.
 
 •The first player to reach the finish spot on the board will win the game. 
-***
+
 
 # Credits: 
 
