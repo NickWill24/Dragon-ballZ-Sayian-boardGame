@@ -7,9 +7,9 @@ body{
     justify-content: center;
     width: 100%;
     min-height: 100vh;
-    /* overflow: hidden; */
     background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/af8f5e85-15e8-48a5-9de9-f278eee8f36a/d74r3ss-563ec208-a9f2-4285-893d-63f5c7ed2359.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi9hZjhmNWU4NS0xNWU4LTQ4YTUtOWRlOS1mMjc4ZWVlOGYzNmEvZDc0cjNzcy01NjNlYzIwOC1hOWYyLTQyODUtODkzZC02M2Y1YzdlZDIzNTkucG5nIn1dXX0.f1GZRGdyENnnF0SrUsgGSzlTuNc5OCY7Rmw9naNI7N4');
     background-size: cover;
+    font-family: 'Bangers', cursive;
 }
 .gameStatus{
     color: red;
@@ -26,6 +26,7 @@ body{
     padding: 1em;
     border-radius: .5em;
     text-align: center;
+    
 }
 .cell{
     height: 65px;

@@ -67,7 +67,7 @@ const playGame = () => {
                 
             }
             let position = gameBoard[gokuMovement]
-            // checkSpecialCondition(position)
+            
             assignPosition(position)
             
         } else {
