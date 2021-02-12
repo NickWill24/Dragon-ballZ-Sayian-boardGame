@@ -26,10 +26,13 @@ Trello : https://trello.com/b/nZm8aDho/game-project-management
 ***
 # How to get start stared:
 ![mockup](images/Gameshot.png)
-Open the the link to to the start the game 
-Their will be two player for this game. 
-The player will have a choice of goku or vegeta 
-The first player to reach the finish spot on the board will win the game. 
+• Open the the link to to the start the game.
+
+•Their will be two player for this game.
+
+•The player will have a choice of goku or vegeta.
+
+•The first player to reach the finish spot on the board will win the game. 
 ***
 
 # Credits: 
