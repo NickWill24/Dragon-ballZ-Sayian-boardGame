@@ -1,4 +1,4 @@
-console.log("Welcome to Dragon Ball Z Sayian Board Game")
+        console.log("Welcome to Dragon Ball Z Sayian Board Game")
 let gameActive= false; 
 let gokuMovement = 0 
 let vegetaMovement = 0 
